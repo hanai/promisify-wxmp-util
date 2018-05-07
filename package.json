@@ -1,11 +1,11 @@
 {
   "name": "promisify-wxmp-util",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Promisify Wexin Mini Program Util",
   "main": "lib/index.js",
   "author": "Hanai",
   "license": "MIT",
-  "private": false,
+  "repository": "hanai/promisify-wxmp-util",
   "scripts": {
     "build": "babel src -d lib"
   },
