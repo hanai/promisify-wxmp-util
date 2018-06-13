@@ -1,6 +1,6 @@
 {
   "name": "promisify-wxmp-util",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Promisify Wexin Mini Program Util",
   "main": "lib/index.js",
   "author": "Hanai",
