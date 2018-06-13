@@ -1,5 +1,5 @@
 export const promisify = (func) => {
-  return (opts) => {
+  return (opts = {}) => {
     return new Promise((resolve, reject) => {
       func(Object.assign(
         opts, {
