@@ -1,10 +1,10 @@
 export const promisify = (func) => {
   return (opts = {}) => {
     return new Promise((resolve, reject) => {
-      func(Object.assign(
+      const ret = func(Object.assign(
         opts, {
           success(...args) {
-            resolve(...args);
+            resolve(...args, ret);
           },
           fail(...args) {
             reject(...args);
