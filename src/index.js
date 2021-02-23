@@ -1,16 +1,16 @@
 export const promisify = (func) => {
   return (opts = {}) => {
     return new Promise((resolve, reject) => {
-      const ret = func(Object.assign(
-          {}, opts, {
-          success(res) {
-            resolve(Object.assign({}, res, { ret }));
-          },
-          fail(err) {
-            reject(err);
-          }
+      opts = Object.assign({}, opts, {
+        success(res) {
+          // save return value of API to `ret`
+          resolve(Object.assign({}, res, { ret }));
+        },
+        fail(err) {
+          reject(err);
         }
-      ));
+      });
+      const ret = func(opts);
     });
   }
 };
